@@ -1,0 +1,24 @@
+# Ignore compiled executables and build artifacts
+*.exe
+*.out
+*.obj
+*.o
+*.dll
+*.class
+
+# Ignore common IDE/editor folders
+.vscode/
+*.code-workspace
+
+# Ignore OS generated files
+Thumbs.db
+.DS_Store
+
+# Ignore temporary files
+*~
+*.swp
+*.tmp
+
+# Ignore build directories
+build/
+bin/
