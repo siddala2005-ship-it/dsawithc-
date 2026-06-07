@@ -26,12 +26,25 @@ Node* buildTree(vector<int>& nodes) {
     return newNode;
 
 }
+void helperNode(Node*root,int k,int level){
+    if(root==NULL){
+        return;
+    }
+    if(level==k){
+        cout<<root->data<<" ";
+    }
+    helperNode(root->left,k,level+1);
+    helperNode(root->right,k,level+1);
+}
+void kthlevel(Node*root,int k){
+    helperNode(root,k,0);
+}
 int main(){
     vector<int> nodes={ 1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
     Node* root=buildTree(nodes);//1 5 3 -1 -1 19 -1 -1 18 -1 -1 25 -1 -1
     cout<<root->data<<endl;//1
 
 
-    
+    kthlevel(root, 2);
     return 0;
 }
